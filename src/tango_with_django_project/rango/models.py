@@ -31,7 +31,7 @@ class Page(models.Model):
 
 class UserProfile(models.Model):
     # This line is required. Links UserProfile to a User model instance.
-    user = models.OneToOneField(User)
+    user = models.OneToOneField(User, on_delete=models.DO_NOTHING)
 
     # The additional attributes we wish to include.
     website = models.URLField(blank=True)
